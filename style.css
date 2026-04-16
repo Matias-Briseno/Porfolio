@@ -1,11 +1,10 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* VARIABLES */
+/* COLORES */
 :root {
     --primary-color: #ff4902;
     --secondary-color: #2200fe;
@@ -71,6 +70,16 @@ header {
     flex-wrap: wrap;
 }
 
+.hero {
+    display: flex;
+    justify-content: center;
+    gap: 13%;
+    margin-top: 30px;    
+}
+
+.hero-text {
+    margin-left: 20px;
+}
 .hero-text h1 {
     font-size: 2.5rem;
     color: var(--primary-color);
@@ -81,15 +90,87 @@ header {
     margin: 10px 0;
 }
 
+.hero-content h3 {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--secondary-color);
+}
+
 .hero-image img {
-    width: 250px;
+    width: 350px;
     border-radius: 50%;
     border: 4px solid var(--primary-color);
+    margin-right: 100px;
+}
+/* REDES SOCIALES */
+
+.contacto {
+    background: var(--card-bg);
+    padding: 40px 20px;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 15px;
+}
+
+.contacto h1 {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* BOTONES */
+.social-links a {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: #1a1a1a;
+    border: 2px solid var(--primary-color);
+    
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* ICONOS */
+.social-links i {
+    font-style: normal;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#linkedin::before {
+    content: "In";
+}
+
+#github::before {
+    content: "GH";
+}
+
+/* HOVER */
+.social-links a:hover {
+    transform: translateY(-6px) scale(1.1);
+    background: var(--primary-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* COLOR ICONO EN HOVER */
+.social-links a:hover i {
+    color: #fff;
 }
 
 /* EXPERIENCIA */
 .experiencia {
-    padding: 50px 20px;
+    padding: 80px 20px 20px;
     text-align: center;
 }
 
@@ -109,7 +190,7 @@ header {
 
 /* PROYECTOS */
 .proyectos {
-    padding: 50px 20px;
+    padding: 80px 20px 20px;
     text-align: center;
 }
 
@@ -117,11 +198,11 @@ header {
     margin-bottom: 30px;
 }
 
-/* CONTENEDOR FLEX */
+/* CONTENEDOR */
 .proyectos-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
-    justify-content: center; /* centra todo el bloque */
+    justify-content: center;
     gap: 25px;
     margin-top: 30px;
 
